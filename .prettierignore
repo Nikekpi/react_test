@@ -1,0 +1,8 @@
+dist/
+node_modules/
+public/
+src/assets/
+src/common/
+src/messages/
+src/vendor/
+scripts/

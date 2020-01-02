@@ -1,0 +1,42 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-eslint-rules", "tslint-misc-rules", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": ["node_modules/**", "src/messages/**"]
+  },
+  "rules": {
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "no-bitwise": false,
+    "no-implicit-dependencies": [true, ["@/assets", "@/components", "@/messages", "@/modules", "@/vendor"]],
+    "no-submodule-imports": [true, "@/assets", "@/components", "@/messages", "@/modules", "@/vendor"],
+    "object-literal-sort-keys": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-last"
+      }
+    ],
+
+    "no-console": false,
+    "no-debugger": false,
+    "no-empty": [true, "allow-empty-functions"],
+
+    "no-constant-condition": true,
+    "no-duplicate-case": true,
+    "no-empty-character-class": true,
+    "no-ex-assign": true,
+    "no-extra-boolean-cast": true,
+    "no-inner-declarations": true,
+    "no-invalid-regexp": true,
+    "no-irregular-whitespace": true,
+    "no-regex-spaces": true,
+    "no-sparse-arrays": true,
+    "valid-typeof": true,
+
+    "class-method-newlines": true,
+    "prefer-or-operator-over-ternary": true
+  },
+  "rulesDirectory": ["tslint-misc-rules", "tslint-eslint-rules"]
+}
