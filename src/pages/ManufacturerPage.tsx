@@ -1,5 +1,9 @@
 import React from "react";
 import { IManufactures, ManufacturersList } from "./../components/ManufacturersList";
+import { ImplantGroupList } from "../components/ImplantGroupList";
+import { IManufacturerView } from "../components/IManufacturerView";
+import { IGroupView } from "../components/IGroupView";
+import { Container, Row, Col } from "react-bootstrap";
 
 const manufacturers: IManufactures = {
   descriptions: [
@@ -20,12 +24,44 @@ const manufacturers: IManufactures = {
   ],
 };
 
-//       //<img>imgUrl = "https://producitonstorage.azureedge.net/filestorage/5.7/Logos/DENTSPLY%20Implants%20Logo.png"</img>
+const groupsTest: IGroupView = {
+  name: "3 external Hexagon",
+  implants: [
+    {
+      name: "gfdg",
+      imgPreviewUrl:
+        "https://producitonstorage.azureedge.net/filestorage/5.7/Previews/Implants/DENTSPLY%20Implants/337E084B-C8B6-40E3-BE99-CC01B960449A.png",
+      length: "45",
+      totalLength: "5",
+    },
+    {
+      name: "iofduh",
+      imgPreviewUrl:
+        "https://producitonstorage.azureedge.net/filestorage/5.7/Previews/Implants/DENTSPLY%20Implants/337E084B-C8B6-40E3-BE99-CC01B960449A.png",
+      length: "45",
+      totalLength: "5",
+    },
+  ],
+};
+
+const testData: IManufacturerView = {
+  name: "dentsply",
+  groups: [groupsTest],
+};
 
 export const ManufacturerPage: React.FC = () => {
   return (
     <>
-      <ManufacturersList descriptions={manufacturers.descriptions} />
+      <Container>
+        <Row>
+          <Col>
+            <ManufacturersList descriptions={manufacturers.descriptions} />
+          </Col>
+          <Col>
+            <ImplantGroupList {...testData} />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
