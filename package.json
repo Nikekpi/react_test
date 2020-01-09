@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@xcd/oil-client": "^0.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -16,13 +17,11 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "tslint": "^5.20.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-eslint-rules": "5.4.0",
-    "tslint-misc-rules": "^3.5.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "init": "npm install -g vsts-npm-auth && npm run refresh-npm-tokens && npm install && code --install-extension esbenp.prettier-vscode",
+    "refresh-npm-tokens": "vsts-npm-auth -config .npmrc",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -45,6 +44,11 @@
   },
   "devDependencies": {
     "bootstrap": "^4.4.1",
-    "react-bootstrap": "^1.0.0-beta.16"
+    "react-bootstrap": "^1.0.0-beta.16",
+    "prettier": "1.18.2",
+    "tslint": "5.19.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-misc-rules": "3.5.1"
   }
 }

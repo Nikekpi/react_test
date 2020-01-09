@@ -40,3 +40,7 @@ code {
 .todo i {
   z-index: 2;
 }
+
+.imgLogo {
+  align-items: flex-end;
+}
